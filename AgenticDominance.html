@@ -638,16 +638,7 @@
     </div>
   </nav>
 
-  <!-- COUNTDOWN BAR -->
-  <div class="countdown-bar" id="countdown-bar">
-    <div class="container">
-      <p>⏰ LIMITED TIME LAUNCH PRICE — CLOSES IN</p>
-      <div class="countdown" id="countdown">
-        <span id="hours">36</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
-      </div>
-      <div class="urgency-label">After this timer hits zero, the price goes up permanently</div>
-    </div>
-  </div>
+
 
   <!-- HERO -->
   <section class="hero">
@@ -940,7 +931,6 @@
         </ul>
         <a href="https://cash.app/pay/link/6xh4o9v1" class="pricing-cta">Buy Now — $318 →</a>
         <div class="guarantee-badge">🛡️ 15-Day Money-Back Guarantee</div>
-        <div class="limited">⏰ Launch price expires when the countdown hits zero</div>
       </div>
       <div class="pricing-card premium">
         <div class="badge">🚀 Agentic Dominance Empire</div>
@@ -1024,33 +1014,7 @@
   </footer>
 
   <script>
-    // 36-HOUR COUNTDOWN TIMER
-    (function() {
-      // Set countdown to 36 hours from page load
-      const totalSeconds = 36 * 60 * 60; // 36 hours in seconds
-      let remaining = totalSeconds;
-      const hoursEl = document.getElementById('hours');
-      const minutesEl = document.getElementById('minutes');
-      const secondsEl = document.getElementById('seconds');
 
-      function updateTimer() {
-        if (remaining <= 0) {
-          hoursEl.textContent = '00';
-          minutesEl.textContent = '00';
-          secondsEl.textContent = '00';
-          return;
-        }
-        const hrs = Math.floor(remaining / 3600);
-        const mins = Math.floor((remaining % 3600) / 60);
-        const secs = remaining % 60;
-        hoursEl.textContent = String(hrs).padStart(2, '0');
-        minutesEl.textContent = String(mins).padStart(2, '0');
-        secondsEl.textContent = String(secs).padStart(2, '0');
-        remaining--;
-      }
-      updateTimer();
-      setInterval(updateTimer, 1000);
-    })();
 
     // FAQ ACCORDION
     document.querySelectorAll('.faq-q').forEach(q => {
