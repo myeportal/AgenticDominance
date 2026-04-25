@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agentic Dominance - AI Agents Build Your Digital Products">
+  <title>Agentic Dominance — AI-Powered Product Creation</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #7c3aed;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --text: #111827;
+      --text-light: #6b7280;
+      --border: #e5e7eb;
+      --success: #059669;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* NAV */
+    nav {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .logo span { color: var(--secondary); }
+    .nav-cta {
+      background: var(--primary);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--primary-dark); }
+    
+    /* HERO */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
+    }
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 10px;
+      font-size: 1.125rem;
+      font-weight: 700;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+    }
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 48px;
+    }
+    .hero-stats div {
+      text-align: center;
+    }
+    .hero-stats .num {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .hero-stats .label {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+    
+    /* FEATURES */
+    .features {
+      padding: 80px 0;
+    }
+    .features h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .feature-card .icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .feature-card h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      color: var(--text-light);
+      font-size: 0.9375rem;
+    }
+    
+    /* PRICING */
+    .pricing {
+      padding: 80px 0;
+      background: var(--bg-alt);
+    }
+    .pricing h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .pricing .subtitle {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 48px;
+    }
+    .pricing-card {
+      max-width: 400px;
+      margin: 0 auto;
+      background: white;
+      border: 2px solid var(--primary);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+    }
+    .pricing-card .badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: white;
+      padding: 4px 20px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .pricing-card .price {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 16px 0;
+    }
+    .pricing-card .price span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-light);
+    }
+    .pricing-card ul {
+      list-style: none;
+      text-align: left;
+      margin: 24px 0;
+    }
+    .pricing-card ul li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      font-size: 0.9375rem;
+    }
+    .pricing-card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: 700;
+    }
+    .pricing-cta {
+      display: block;
+      background: var(--primary);
+      color: white;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1.0625rem;
+      transition: background 0.2s;
+    }
+    .pricing-cta:hover { background: var(--primary-dark); }
+    
+    /* FOOTER */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.875rem;
+      border-top: 1px solid var(--border);
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero-stats { flex-direction: column; gap: 24px; }
+      .features-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 60px 0 40px; }
+      .hero h1 { font-size: 1.75rem; }
+      .nav-cta { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo"><span class="blue">Agentic</span> <span class="purple">Dominance</span></div>
+      <a href="#" class="nav-cta">Get The Blueprint</a>
+    </div>
+  </nav>
+  
+  <section class="hero">
+    <div class="container">
+      <h1>10 AI Agents That Build Your <span>Digital Products</span></h1>
+      <p>From raw idea to launch-ready product in 1 Day. Sales page, emails, ads, ebook — all created by specialized AI agents working as your product team.</p>
+      <a href="#" class="hero-cta">Build Your First Product →</a>
+      <div class="hero-stats">
+        <div><div class="num">14</div><div class="label">Days to Launch</div></div>
+        <div><div class="num">$318</div><div class="label">One-Time Investment</div></div>
+        <div><div class="num">10x</div><div class="label">Faster Than Freelancers</div></div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="features">
+    <div class="container">
+      <h2>Your AI Product Creation Team</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon">📋</div>
+          <h3>Market Research Scout</h3>
+          <p>Validates demand, analyzes competitors, profiles your buyer. Prevents wasted effort on bad ideas before you invest time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📝</div>
+          <h3>Content Writer</h3>
+          <p>Produces 15,000+ words per product — ebook, sales page, emails, ads, social posts. Every feature paired with a benefit.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🎯</div>
+          <h3>Marketing Strategist</h3>
+          <p>Sets pricing, designs funnels, manages affiliates. 7+ years of launch experience programmed into every decision.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📧</div>
+          <h3>Email Architect</h3>
+          <p>Builds complete launch sequences, welcome flows, upsell follow-ups, and re-engagement campaigns.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">✅</div>
+          <h3>Quality Controller</h3>
+          <p>Reviews every deliverable against professional checklists. Returns substandard work with specific revision notes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📊</div>
+          <h3>Performance Analyst</h3>
+          <p>Tracks every launch metric in real-time. Sales, conversions, email stats, traffic sources — all in one dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="pricing">
+    <div class="container">
+      <h2>One Blueprint. Infinite Products.</h2>
+      <p class="subtitle">The complete Agentic Dominance system documentation — 5,000+ pages, 25 chapters, 5 bonuses</p>
+      <div class="pricing-card">
+        <div class="badge">Best Value</div>
+        <div class="price">$27 <span>one-time</span></div>
+        <ul>
+          <li>5,000+ page ebook — full system documentation</li>
+          <li>10 agent SKILL.md templates — ready to deploy</li>
+          <li>Complete launch email sequence pack</li>
+          <li>ClickBank/JVZoo sales page template</li>
+          <li>Funnel architecture blueprints (6 designs)</li>
+          <li>15-day content calendar for social media</li>
+          <li>Private buyer community access</li>
+        </ul>
+        <a href="#" class="pricing-cta">Get Agentic Dominance →</a>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>Agentic Dominance — The world's premier agent skills creators for OpenClaw</p>
+    </div>
+  </footer>
+</body>
+</html>
