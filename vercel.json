@@ -1,1 +1,13 @@
-{}
+{
+  "functions": {
+    "api/download-blueprint.js": {
+      "includeFiles": "ebook/agentic_dominance.pdf"
+    }
+  },
+  "routes": [
+    {
+      "src": "/ebook/(.*)",
+      "status": 404
+    }
+  ]
+}
