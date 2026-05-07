@@ -6,6 +6,13 @@ const PRODUCTS = {
     successPath: '/thank-you.html?product=blueprint&session_id={CHECKOUT_SESSION_ID}',
     cancelPath: '/?checkout=cancelled&product=blueprint',
   },
+  'complete-system': {
+    amount: 31800,
+    name: 'Agentic Dominance Complete System',
+    description: 'Immediate access to the Complete System buyer guide and setup workbook.',
+    successPath: '/thank-you.html?product=complete-system&session_id={CHECKOUT_SESSION_ID}',
+    cancelPath: '/?checkout=cancelled&product=complete-system',
+  },
 }
 
 function getBaseUrl(req) {

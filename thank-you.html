@@ -68,10 +68,10 @@
 <body>
   <main class="card">
     <div class="badge">Payment received</div>
-    <h1>Thank you for purchasing the Blueprint.</h1>
-    <p>Your payment has been received. Use the secure download button below to access your PDF. The file is only served after Stripe confirms your payment session.</p>
+    <h1 id="title">Thank you for your purchase.</h1>
+    <p id="description">Your payment has been received. Use the secure download button below to access your PDF. The file is only served after Stripe confirms your payment session.</p>
     <div class="actions">
-      <a id="download-link" class="button" href="#">Download Agentic Dominance Blueprint</a>
+      <a id="download-link" class="button" href="#">Download your product</a>
       <a class="button secondary" href="/">Return to sales page</a>
     </div>
     <p id="message" class="fine">Verifying your secure session…</p>
@@ -79,8 +79,29 @@
   <script>
     const params = new URLSearchParams(window.location.search)
     const sessionId = params.get('session_id')
+    const product = params.get('product') || 'blueprint'
+    const title = document.getElementById('title')
+    const description = document.getElementById('description')
     const downloadLink = document.getElementById('download-link')
     const message = document.getElementById('message')
+
+    const productConfig = {
+      blueprint: {
+        title: 'Thank you for purchasing the Blueprint.',
+        description: 'Your payment has been received. Use the secure download button below to access your PDF. The file is only served after Stripe confirms your payment session.',
+        button: 'Download Agentic Dominance Blueprint'
+      },
+      'complete-system': {
+        title: 'Thank you for purchasing the Complete System.',
+        description: 'Your payment has been received. Use the secure download button below to access your Complete System buyer guide and setup workbook. The file is only served after Stripe confirms your payment session.',
+        button: 'Download Complete System Guide'
+      }
+    }
+
+    const activeProduct = productConfig[product] || productConfig.blueprint
+    title.textContent = activeProduct.title
+    description.textContent = activeProduct.description
+    downloadLink.textContent = activeProduct.button
 
     if (!sessionId) {
       downloadLink.removeAttribute('href')
@@ -89,7 +110,7 @@
       message.textContent = 'Missing session_id. Please return to the sales page or contact support if payment already completed.'
       message.classList.add('error')
     } else {
-      downloadLink.href = `/api/download-blueprint?session_id=${encodeURIComponent(sessionId)}`
+      downloadLink.href = `/api/download-product?product=${encodeURIComponent(product)}&session_id=${encodeURIComponent(sessionId)}`
       message.textContent = 'Your download link is ready. If the file does not start, your payment session may still be processing.'
     }
   </script>
