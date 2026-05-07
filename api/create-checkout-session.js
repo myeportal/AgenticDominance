@@ -13,6 +13,13 @@ const PRODUCTS = {
     successPath: '/thank-you.html?product=complete-system&session_id={CHECKOUT_SESSION_ID}',
     cancelPath: '/?checkout=cancelled&product=complete-system',
   },
+  empire: {
+    amount: 78600,
+    name: 'Agentic Dominance Empire DFY Annual',
+    description: 'Immediate access to the Empire DFY annual buyer guide and onboarding workbook.',
+    successPath: '/thank-you.html?product=empire&session_id={CHECKOUT_SESSION_ID}',
+    cancelPath: '/?checkout=cancelled&product=empire',
+  },
 }
 
 function getBaseUrl(req) {

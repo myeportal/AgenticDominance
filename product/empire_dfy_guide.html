@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic Dominance Empire DFY Guide</title>
+  <style>
+    @page { size: letter; margin: 0.7in; }
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #cbd5e1;
+      --blue: #1d4ed8;
+      --violet: #7c3aed;
+      --emerald: #059669;
+      --bg: #f8fafc;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: Inter, Arial, sans-serif; color: var(--ink); margin: 0; line-height: 1.55; font-size: 11pt; }
+    .cover { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; padding: 0.3in 0; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.18em; font-weight: 800; color: var(--emerald); font-size: 10pt; margin-bottom: 16px; }
+    h1 { font-size: 30pt; line-height: 1.05; margin: 0 0 14px; }
+    h2 { font-size: 20pt; margin: 32px 0 12px; color: var(--blue); page-break-after: avoid; }
+    h3 { font-size: 14pt; margin: 22px 0 10px; color: var(--violet); page-break-after: avoid; }
+    p, li { color: var(--ink); }
+    .sub { font-size: 14pt; color: var(--muted); max-width: 44em; }
+    .meta, .callout, .notes { border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: var(--bg); }
+    .meta { margin-top: 28px; }
+    .pillrow { margin: 12px 0 0; }
+    .pill { display: inline-block; padding: 7px 12px; margin: 0 8px 8px 0; border-radius: 999px; background: #e2e8f0; font-size: 10pt; font-weight: 700; }
+    ul, ol { padding-left: 20px; }
+    .chapter { page-break-inside: avoid; margin-bottom: 20px; }
+    .notes { margin-top: 12px; background: white; }
+    .line { border-bottom: 1px solid #cbd5e1; height: 22px; margin-top: 8px; }
+    .small { color: var(--muted); font-size: 10pt; }
+    .page-break { page-break-before: always; }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <div class="eyebrow">Agentic Dominance • Empire DFY Annual</div>
+    <h1>Agentic Dominance Empire: Done-For-You Annual Setup Guide</h1>
+    <p class="sub">This is the buyer guide for the $786 per year Empire offer. It explains the full done-for-you scope, what is handled for the customer, what credentials and accounts are required, what the onboarding sequence looks like, and what happens after they submit their details.</p>
+    <div class="meta">
+      <p><strong>Offer:</strong> Agentic Dominance Empire — $786 per year</p>
+      <p><strong>Core promise:</strong> all-in annual access to the complete system plus done-for-you setup, deployment help, upgrades, and priority support once the buyer provides the required accounts, APIs, and domain details.</p>
+      <div class="pillrow">
+        <span class="pill">DFY setup</span>
+        <span class="pill">Hosting + deployment path</span>
+        <span class="pill">API onboarding</span>
+        <span class="pill">Annual upgrades</span>
+        <span class="pill">Priority support</span>
+        <span class="pill">Implementation workbook</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What the $786 Empire offer includes</h2>
+    <div class="callout">
+      <p>This is the highest tier. It includes the strategic materials from the lower offers and expands them into a done-for-you annual relationship built around setup, deployment readiness, updates, and support.</p>
+    </div>
+    <ul>
+      <li><strong>Everything in the Complete System:</strong> the main blueprint, templates, funnel assets, email sequences, sales-page materials, and planning documents.</li>
+      <li><strong>Done-for-you setup service:</strong> assistance configuring the environment, deployment path, and the core structure needed to run the model blueprint.</li>
+      <li><strong>Hosting and deployment readiness:</strong> the process is designed to get the product running on the buyer’s chosen domain and hosting path once required account details are provided.</li>
+      <li><strong>API connection planning:</strong> the buyer’s selected AI provider keys are used so the agent stack can connect to the chosen model provider.</li>
+      <li><strong>Annual upgrades and additions:</strong> access to ongoing improvements, updates, and newly added assets during the active annual term.</li>
+      <li><strong>Priority support:</strong> faster support handling for implementation and operational questions during the active annual term.</li>
+    </ul>
+  </section>
+
+  <section class="page-break">
+    <h2>What “done-for-you” means here</h2>
+    <p>The DFY offer is meant to reduce friction for the buyer. Instead of only giving strategy documents, this tier adds the implementation path and service layer.</p>
+    <ol>
+      <li><strong>Environment readiness:</strong> the buyer’s hosting and deployment stack are prepared once the required account details are available.</li>
+      <li><strong>Domain path:</strong> the chosen domain is used for the live offer or project setup.</li>
+      <li><strong>API path:</strong> the buyer’s chosen AI provider keys are connected into the workflow so the stack runs on the buyer’s own provider access.</li>
+      <li><strong>Model blueprint deployment:</strong> the product structure is prepared according to the Empire scope.</li>
+      <li><strong>Annual continuity:</strong> the offer includes continuing updates and annual support during the subscription term.</li>
+    </ol>
+    <div class="callout">
+      <p><strong>Important:</strong> this is still dependent on the buyer providing their own accounts, APIs, and required access. The service handles the setup path, but it cannot replace the buyer’s ownership of their domain, API usage, GitHub, Vercel, or related accounts.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Exactly what the buyer must provide</h2>
+    <p>To start the DFY annual setup, the buyer needs to provide the following. This section is intentionally explicit so nothing slows down the onboarding process.</p>
+
+    <div class="chapter">
+      <h3>Chapter 1 — AI API keys</h3>
+      <p>The buyer must provide whichever API they want used for the stack. OpenAI, xAI, Claude, or another supported provider can be used. The goal is simple: the stack must be able to authenticate against the model provider the buyer chooses.</p>
+      <ul>
+        <li>At least one usable AI API is required</li>
+        <li>Multiple providers can be used if the buyer wants redundancy or tiered routing</li>
+        <li>The buyer is responsible for maintaining billing and usage on their chosen provider account</li>
+      </ul>
+      <div class="notes">
+        <strong>Notes — record provider names, key ownership, account email, intended usage, and any limits to respect</strong>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h3>Chapter 2 — Domain to deploy on</h3>
+      <p>The buyer needs to provide the domain they want the product or offer to use. This is necessary for live deployment, routing, and future brand continuity.</p>
+      <ul>
+        <li>Existing domain or newly purchased domain both work</li>
+        <li>Registrar and DNS access matter</li>
+        <li>If the buyer wants a subdomain strategy, that can be used too</li>
+      </ul>
+      <div class="notes">
+        <strong>Notes — record domain, registrar, DNS access status, and preferred live URL structure</strong>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h3>Chapter 3 — Hosting account name and email</h3>
+      <p>The buyer needs to provide the name and email for the hosting account. These can be updated later, but they are needed to begin setup cleanly.</p>
+      <ul>
+        <li>Primary account owner name</li>
+        <li>Primary hosting email</li>
+        <li>Preferred hosting stack if already known</li>
+      </ul>
+      <div class="notes">
+        <strong>Notes — record exact hosting name, email, and any access conditions or preferences</strong>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h3>Chapter 4 — GitHub and Vercel accounts</h3>
+      <p>The buyer must have or create GitHub and Vercel accounts. These are needed for source management, deployment, future updates, and stable operational continuity.</p>
+      <ul>
+        <li>GitHub handles repo and source management</li>
+        <li>Vercel handles hosting/deployment path for this model blueprint flow</li>
+        <li>Without these accounts, the DFY setup cannot be completed properly</li>
+      </ul>
+      <div class="notes">
+        <strong>Notes — record GitHub email, Vercel email, usernames/team names, and access state</strong>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h3>Chapter 5 — Contact and support address</h3>
+      <p>The contact address for the project is:</p>
+      <p><strong>contactblocknewsmedia@gmail.com</strong></p>
+      <p>This is the current contact-us email to use for communication related to the setup process.</p>
+      <div class="notes">
+        <strong>Notes — record any preferred support routing, support expectations, or backup contact method</strong>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-break">
+    <h2>Expanded detail: what the Empire buyer is getting</h2>
+    <h3>1. Full annual relationship, not just a file dump</h3>
+    <p>The Empire tier is not simply a larger PDF. It is a service-backed offer meant to carry the buyer from decision into implementation, maintenance, and future updates during the active year.</p>
+
+    <h3>2. Hosting and deployment path</h3>
+    <p>The buyer is not expected to invent the deployment path alone. Once the buyer’s accounts and required details are provided, the setup can be structured around their domain, their hosting identity, and their preferred operating path.</p>
+
+    <h3>3. API integration readiness</h3>
+    <p>The stack is built around the buyer’s chosen API provider. That means the buyer retains control of their own model usage, billing, and platform ownership while the setup uses their credentials to make the system function.</p>
+
+    <h3>4. Support and upgrades</h3>
+    <p>The annual structure supports ongoing value. That includes additions, improvements, and a support layer that goes beyond a one-time delivery.</p>
+
+    <h3>5. Buyer-side actions still matter</h3>
+    <p>Even in a DFY offer, the buyer must still provide core ownership details. No one can ethically or practically complete a deployment without the buyer’s domain, accounts, and API access.</p>
+  </section>
+
+  <section>
+    <h2>What happens after the buyer replies</h2>
+    <ol>
+      <li>The buyer sends the required details listed in this guide.</li>
+      <li>The setup path is reviewed against the buyer’s chosen API, domain, hosting identity, and account status.</li>
+      <li>The DFY implementation begins based on the Empire scope.</li>
+      <li>The buyer moves into the annual support/update relationship.</li>
+    </ol>
+    <div class="callout">
+      <p><strong>Plain-English summary:</strong> this offer is for the buyer who wants the fullest path — strategy, structure, implementation help, account-based setup, and ongoing annual value.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Empire buyer checklist</h2>
+    <ul>
+      <li>I have chosen the API provider(s) I want used.</li>
+      <li>I have the domain I want this deployed on.</li>
+      <li>I have the hosting account name and email ready.</li>
+      <li>I understand the project contact email is contactblocknewsmedia@gmail.com.</li>
+      <li>I have or will create GitHub and Vercel accounts.</li>
+      <li>I understand the annual offer includes setup help but still requires my own accounts and credentials.</li>
+      <li>I am ready to send my details so the DFY process can begin.</li>
+    </ul>
+    <p class="small">Prepared for the Agentic Dominance Empire annual offer.</p>
+  </section>
+</body>
+</html>

@@ -14,6 +14,12 @@ const PRODUCTS = {
     downloadName: 'agentic_dominance_complete_system_guide.pdf',
     unauthorizedMessage: 'This download link is not authorized for the complete system product.',
   },
+  empire: {
+    amount: 78600,
+    filePath: path.join(process.cwd(), 'product', 'agentic_dominance_empire_dfy_guide.pdf'),
+    downloadName: 'agentic_dominance_empire_dfy_guide.pdf',
+    unauthorizedMessage: 'This download link is not authorized for the empire product.',
+  },
 }
 
 async function fetchCheckoutSession(secretKey, sessionId) {
