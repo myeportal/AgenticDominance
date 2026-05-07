@@ -1,11 +1,7 @@
 {
   "functions": {
     "api/download-product.js": {
-      "includeFiles": [
-        "ebook/agentic_dominance.pdf",
-        "product/agentic_dominance_complete_system_guide.pdf",
-        "product/agentic_dominance_empire_dfy_guide.pdf"
-      ]
+      "includeFiles": "{ebook/agentic_dominance.pdf,product/agentic_dominance_complete_system_guide.pdf,product/agentic_dominance_empire_dfy_guide.pdf}"
     }
   },
   "routes": [
