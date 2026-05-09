@@ -1,8 +1,8 @@
 const PRODUCTS = {
   blueprint: {
-    amount: 2700,
-    name: 'Agentic Dominance Blueprint',
-    description: 'Immediate access to the Agentic Dominance PDF blueprint.',
+    amount: 19900,
+    name: 'Agentic Dominance White Label Package',
+    description: 'Immediate access to the Agentic Dominance white label package and secure PDF delivery.',
     successPath: '/thank-you.html?product=blueprint&session_id={CHECKOUT_SESSION_ID}',
     cancelPath: '/?checkout=cancelled&product=blueprint',
   },

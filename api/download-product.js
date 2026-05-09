@@ -3,7 +3,7 @@ const path = require('node:path')
 
 const PRODUCTS = {
   blueprint: {
-    amount: 2700,
+    amount: 19900,
     filePath: path.join(process.cwd(), 'ebook', 'agentic_dominance.pdf'),
     downloadName: 'IDEA2CREATIONV3.pdf',
     unauthorizedMessage: 'This download link is not authorized for the blueprint product.',
