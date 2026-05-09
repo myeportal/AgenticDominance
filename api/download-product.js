@@ -5,7 +5,7 @@ const PRODUCTS = {
   blueprint: {
     amount: 2700,
     filePath: path.join(process.cwd(), 'ebook', 'agentic_dominance.pdf'),
-    downloadName: 'agentic_dominance_blueprint.pdf',
+    downloadName: 'IDEA2CREATIONV3.pdf',
     unauthorizedMessage: 'This download link is not authorized for the blueprint product.',
   },
   'complete-system': {
