@@ -490,6 +490,11 @@
       border-top: 1px solid var(--border);
     }
 
+    .site-closer-toggle,.site-closer-send{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:14px 18px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;box-shadow:0 16px 34px rgba(37,99,235,.24)}
+    .site-closer-toggle{position:fixed;right:18px;bottom:18px;z-index:120}.site-closer{position:fixed;right:18px;bottom:84px;z-index:119;width:min(390px,calc(100vw - 24px));display:none;border:1px solid var(--border);border-radius:24px;background:rgba(255,255,255,.98);box-shadow:0 24px 60px rgba(0,0,0,.18);overflow:hidden}.site-closer.open{display:block}.site-closer-header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:16px 18px;border-bottom:1px solid var(--border)}.site-closer-header p,.site-closer-note{color:var(--text-light);font-size:.9rem}.site-closer-close{border:0;background:transparent;color:var(--text-light);font-size:1.2rem;cursor:pointer}
+    .site-closer-body{padding:16px 18px;display:grid;gap:12px;max-height:min(72vh,620px);overflow:auto}.site-closer-messages{display:grid;gap:10px}.site-closer-msg{padding:12px 14px;border-radius:16px;font-size:.95rem;line-height:1.5}.site-closer-msg.bot{background:#eff6ff;border:1px solid #dbeafe}.site-closer-msg.user{background:#f8fafc;border:1px solid var(--border)}
+    .site-closer-input-wrap{display:grid;grid-template-columns:1fr auto;gap:10px}.site-closer-input{width:100%;padding:12px 14px;border-radius:16px;border:1px solid var(--border);background:#fff;color:var(--text);font:inherit}.site-closer-options,.site-closer-actions{display:flex;flex-wrap:wrap;gap:10px}.site-closer-option,.site-closer-primary,.site-closer-secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:10px 14px;font-weight:800;border:1px solid var(--border);background:#fff;color:var(--text);cursor:pointer}.site-closer-primary{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;border:0}
+
     /* BUSINESS TYPES SECTION */
     .business-types {
       padding: 80px 0;
@@ -1022,6 +1027,27 @@
     </div>
   </section>
 
+  <button class="site-closer-toggle" id="site-closer-toggle" type="button">Need help choosing?</button>
+  <aside class="site-closer" id="site-closer" aria-label="Agentic Dominance offer helper">
+    <div class="site-closer-header">
+      <div>
+        <strong>Agentic Dominance Offer Helper</strong>
+        <p>Tell me what kind of business build you want and I’ll point you to the best path.</p>
+      </div>
+      <button class="site-closer-close" id="site-closer-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="site-closer-body">
+      <div class="site-closer-messages" id="site-closer-messages"></div>
+      <div class="site-closer-input-wrap">
+        <input class="site-closer-input" id="site-closer-input" type="text" placeholder="What do you want to launch?" />
+        <button class="site-closer-send" id="site-closer-send" type="button">Send</button>
+      </div>
+      <div class="site-closer-options" id="site-closer-options"></div>
+      <div class="site-closer-actions" id="site-closer-actions"></div>
+      <div class="site-closer-note">Start with the BluePrint at $27, take the full system at $318, or go Empire at $786/year.</div>
+    </div>
+  </aside>
+
   <footer>
     <div class="container">
       <p>Agentic Dominance — The world's premier agent skills creators for OpenClaw</p>
@@ -1040,5 +1066,6 @@
     });
   </script>
 
+  <script src="site-closer.js"></script>
 </body>
 </html>
